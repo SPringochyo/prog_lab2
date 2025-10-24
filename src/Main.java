@@ -1,7 +1,8 @@
 package master;
 
-import moves.*;
-import pokemons.*;
+import master.moves.*;
+import master.pokemons.*;
+import ru.ifmo.se.pokemon.*;
 
 public class Main {
 
