@@ -1,6 +1,6 @@
-package pokemons;
+package master.pokemons;
 
-import moves.*;
+import master.moves.*;
 import ru.ifmo.se.pokemon.*;
 
 public class Minun extends Pokemon {
