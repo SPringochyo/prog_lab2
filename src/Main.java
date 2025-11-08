@@ -7,13 +7,13 @@ import ru.ifmo.se.pokemon.*;
 public class Main {
 
     public static void main(String[] args) {
-        // Минимально работающая программа:
-        //
-        // Battle b = new Battle();
-        // Pokemon p1 = new Pokemon("Чужой", 1);
-        // Pokemon p2 = new Pokemon("Хищник", 1);
-        // b.addAlly(p1);
-        // b.addFoe(p2);
-        // b.go();
+        Battle b = new Battle();
+
+        b.addAlly(new Minun("Минун 1", 5));
+        b.addAlly(new Minun("Минун 2", 5));
+        b.addFoe(new Custom("Поджигатель 1", 5));
+        b.addFoe(new Custom("Поджигатель 2", 5));
+
+        b.go();
     }
 }
