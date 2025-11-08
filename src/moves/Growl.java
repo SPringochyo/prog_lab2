@@ -11,7 +11,6 @@ public class Growl extends StatusMove {
 
     @Override public void applyOppEffects(Pokemon p) {
         Effect e = new Effect().stat(Stat.ATTACK, -1);
-
         p.addEffect(e);
     }
 

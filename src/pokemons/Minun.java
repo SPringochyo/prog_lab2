@@ -12,5 +12,6 @@ public class Minun extends Pokemon {
         this.addMove(new Swagger());
         this.addMove(new Growl());
         this.addMove(new Facade());
+        this.addMove(new Sing());
     }
 }
