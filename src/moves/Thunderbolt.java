@@ -12,18 +12,18 @@ public class Thunderbolt extends SpecialMove {
     private boolean flag = false;
 
     @Override public void applyOppEffects(Pokemon p) {
-        this.flag = false;
-        if (Math.random() <= 0.1){
+        if (flag){
             Effect.paralyze(p);
-            this.flag = true;
         }
     }
 
     @Override public String describe() {
-        if (this.flag) {
-            return "применяет Thunderbolt (Парализует цель)";
+        flag = false;
+        if (Math.random() <= 0.1){
+            flag = true;
+            return "применяет Thunder (Парализует цель)";
         } else {
-            return "применяет Thunderbolt (Не парализует цель)";
+            return "применяет Thunder (Не парализует цель)";
         }
 
     }

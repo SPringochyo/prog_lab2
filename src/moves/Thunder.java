@@ -12,15 +12,15 @@ public class Thunder extends SpecialMove {
     private boolean flag = false;
 
     @Override public void applyOppEffects(Pokemon p) {
-        this.flag = false;
-        if (Math.random() <= 0.3){
+        if (flag){
             Effect.paralyze(p);
-            this.flag = true;
         }
     }
 
     @Override public String describe() {
-        if (this.flag) {
+        flag = false;
+        if (Math.random() <= 0.3){
+            flag = true;
             return "применяет Thunder (Парализует цель)";
         } else {
             return "применяет Thunder (Не парализует цель)";
