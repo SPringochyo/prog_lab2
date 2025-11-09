@@ -11,8 +11,8 @@ public class Main {
 
         b.addAlly(new Minun("Минун 1", 5));
         b.addAlly(new Minun("Минун 2", 5));
-        b.addFoe(new Custom("Поджигатель 1", 5));
-        b.addFoe(new Custom("Поджигатель 2", 5));
+        b.addFoe(new Cinccino("Чинчино 1", 5));
+        b.addFoe(new Cinccino("Чинчино 2", 5));
 
         b.go();
     }
