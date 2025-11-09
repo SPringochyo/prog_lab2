@@ -16,25 +16,28 @@ public class Facade extends PhysicalMove {
         int atk = (int) p.getStat(Stat.ATTACK);
         Effect e = new Effect().stat(Stat.ATTACK, atk * 2);
 
-        this.status = p.getCondition();
+        status = p.getCondition();
 
-        if (this.status == Status.BURN || this.status == Status.PARALYZE || this.status == Status.POISON) {
+        if (status == Status.BURN || status == Status.PARALYZE || status == Status.POISON) {
             p.addEffect(e);
         }
     }
 
     @Override public String describe() {
-        if (this.status == Status.BURN) {
-            return "применяет Facade (Сила удваивается, т.к. покемон обожжен)";
-        }
-        else if (this.status == Status.PARALYZE) {
-            return "применяет Facade (Сила удваивается, т.к. покемон парализован)";
-        }
-        else if (this.status == Status.POISON) {
-            return "применяет Facade (Сила удваивается, т.к. покемон отравлен)";
-        }
-        else {
-            return "применяет Facade (Неуспешно)";
-        }
+
+        return "применяет Facade (Сила удваивается, если покемон обожжен, парализован или отравлен)";
+
+        // if (status == Status.BURN) {
+        //     return "применяет Facade (Сила удваивается, т.к. покемон обожжен)";
+        // }
+        // else if (status == Status.PARALYZE) {
+        //     return "применяет Facade (Сила удваивается, т.к. покемон парализован)";
+        // }
+        // else if (status == Status.POISON) {
+        //     return "применяет Facade (Сила удваивается, т.к. покемон отравлен)";
+        // }
+        // else {
+        //     return "применяет Facade (Неуспешно)";
+        // }
     }
 }
