@@ -21,9 +21,9 @@ public class Thunderbolt extends SpecialMove {
         flag = false;
         if (Math.random() <= 0.1){
             flag = true;
-            return "применяет Thunder (Парализует цель)";
+            return "применяет Thunderbolt (Парализует цель)";
         } else {
-            return "применяет Thunder (Не парализует цель)";
+            return "применяет Thunderbolt (Не парализует цель)";
         }
 
     }
